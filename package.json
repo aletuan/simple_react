@@ -18,5 +18,9 @@
   "homepage": "https://github.com/aletuan/simple_react#readme",
   "dependencies": {
     "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react": "^6.24.1"
   }
 }
