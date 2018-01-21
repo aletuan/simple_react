@@ -221,14 +221,29 @@ var IssueList = function (_React$Component5) {
     function IssueList() {
         _classCallCheck(this, IssueList);
 
+        //this.state = { issues: issues };
         var _this5 = _possibleConstructorReturn(this, (IssueList.__proto__ || Object.getPrototypeOf(IssueList)).call(this));
 
-        _this5.state = { issues: issues };
+        _this5.state = { issues: [] };
         setTimeout(_this5.createTestIssue.bind(_this5), 2000);
         return _this5;
     }
 
     _createClass(IssueList, [{
+        key: 'componentDidMount',
+        value: function componentDidMount() {
+            this.loadData();
+        }
+    }, {
+        key: 'loadData',
+        value: function loadData() {
+            var _this6 = this;
+
+            setTimeout(function () {
+                _this6.setState({ issues: issues });
+            }, 5000);
+        }
+    }, {
         key: 'createTestIssue',
         value: function createTestIssue() {
             this.createIssue({
