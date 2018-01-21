@@ -77,10 +77,26 @@ var IssueTable = function (_React$Component2) {
                 React.createElement(
                     "tbody",
                     null,
-                    React.createElement(IssueRow, { issue_id: 1, issue_title: "Error console when click Add button" }),
-                    React.createElement(IssueRow, { issue_id: 2, issue_title: "Missing bottom border on panel" }),
-                    React.createElement(IssueRow, { issue_id: 3, issue_title: "Wrong title content" }),
-                    React.createElement(IssueRow, { issue_id: 4, issue_title: "Wrong title format" })
+                    React.createElement(
+                        IssueRow,
+                        { issue_id: 1 },
+                        "Error console when click Add button"
+                    ),
+                    React.createElement(
+                        IssueRow,
+                        { issue_id: 2 },
+                        "Missing bottom border on panel"
+                    ),
+                    React.createElement(
+                        IssueRow,
+                        { issue_id: 3 },
+                        "Wrong title content"
+                    ),
+                    React.createElement(
+                        IssueRow,
+                        { issue_id: 4 },
+                        "Wrong title format"
+                    )
                 )
             );
         }
@@ -114,7 +130,7 @@ var IssueRow = function (_React$Component3) {
                 React.createElement(
                     "td",
                     { style: borderStyle },
-                    this.props.issue_title
+                    this.props.children
                 )
             );
         }
