@@ -70,13 +70,13 @@ var IssueTable = function (_React$Component2) {
     _createClass(IssueTable, [{
         key: 'render',
         value: function render() {
-            var borderStyle = { border: "1px solid silver", padding: 6 };
+            //const borderStyle = {border: "1px solid silver", padding: 6};
             var issueRows = this.props.issues.map(function (issue) {
                 return React.createElement(IssueRow, { key: issue.id, issue: issue });
             });
             return React.createElement(
                 'table',
-                { style: { borderCollapse: "collapse" } },
+                { className: 'bordered-table' },
                 React.createElement(
                     'thead',
                     null,
@@ -85,37 +85,37 @@ var IssueTable = function (_React$Component2) {
                         null,
                         React.createElement(
                             'th',
-                            { style: borderStyle },
+                            null,
                             'Id'
                         ),
                         React.createElement(
                             'th',
-                            { style: borderStyle },
+                            null,
                             'Status'
                         ),
                         React.createElement(
                             'th',
-                            { style: borderStyle },
+                            null,
                             'Owner'
                         ),
                         React.createElement(
                             'th',
-                            { style: borderStyle },
+                            null,
                             'Created'
                         ),
                         React.createElement(
                             'th',
-                            { style: borderStyle },
+                            null,
                             'Effort'
                         ),
                         React.createElement(
                             'th',
-                            { style: borderStyle },
+                            null,
                             'Completion Date'
                         ),
                         React.createElement(
                             'th',
-                            { style: borderStyle },
+                            null,
                             'Title'
                         )
                     )
@@ -144,7 +144,7 @@ var IssueRow = function (_React$Component3) {
     _createClass(IssueRow, [{
         key: 'render',
         value: function render() {
-            var borderStyle = { border: "1px solid silver", padding: 4 };
+            //const borderStyle = {border: "1px solid silver", padding: 4};
             var issue = this.props.issue;
 
             return React.createElement(
@@ -152,37 +152,37 @@ var IssueRow = function (_React$Component3) {
                 null,
                 React.createElement(
                     'td',
-                    { style: borderStyle },
+                    null,
                     issue.id
                 ),
                 React.createElement(
                     'td',
-                    { style: borderStyle },
+                    null,
                     issue.status
                 ),
                 React.createElement(
                     'td',
-                    { style: borderStyle },
+                    null,
                     issue.owner
                 ),
                 React.createElement(
                     'td',
-                    { style: borderStyle },
+                    null,
                     issue.created.toDateString()
                 ),
                 React.createElement(
                     'td',
-                    { style: borderStyle },
+                    null,
                     issue.effort
                 ),
                 React.createElement(
                     'td',
-                    { style: borderStyle },
+                    null,
                     issue.completionDate ? issue.completionDate.toString() : ''
                 ),
                 React.createElement(
                     'td',
-                    { style: borderStyle },
+                    null,
                     issue.title
                 )
             );

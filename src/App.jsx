@@ -39,19 +39,19 @@ class IssueFilter extends React.Component {
 
 class IssueTable extends React.Component {
     render() {
-        const borderStyle = {border: "1px solid silver", padding: 6};
+        //const borderStyle = {border: "1px solid silver", padding: 6};
         const issueRows = this.props.issues.map(issue => <IssueRow key={issue.id} issue={issue} />);
         return (            
-            <table style={{borderCollapse: "collapse"}}>
+            <table className="bordered-table">
                 <thead>
                     <tr>
-                        <th style={borderStyle}>Id</th>
-                        <th style={borderStyle}>Status</th>
-                        <th style={borderStyle}>Owner</th>
-                        <th style={borderStyle}>Created</th>
-                        <th style={borderStyle}>Effort</th>
-                        <th style={borderStyle}>Completion Date</th>
-                        <th style={borderStyle}>Title</th>
+                        <th>Id</th>
+                        <th>Status</th>
+                        <th>Owner</th>
+                        <th>Created</th>
+                        <th>Effort</th>
+                        <th>Completion Date</th>
+                        <th>Title</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -64,18 +64,18 @@ class IssueTable extends React.Component {
 
 class IssueRow extends React.Component {
     render() {
-        const borderStyle = {border: "1px solid silver", padding: 4};
+        //const borderStyle = {border: "1px solid silver", padding: 4};
         const issue = this.props.issue;
 
         return (
             <tr>
-                <td style={borderStyle}>{issue.id}</td>
-                <td style={borderStyle}>{issue.status}</td>
-                <td style={borderStyle}>{issue.owner}</td>
-                <td style={borderStyle}>{issue.created.toDateString()}</td>
-                <td style={borderStyle}>{issue.effort}</td>
-                <td style={borderStyle}>{issue.completionDate ? issue.completionDate.toString(): ''}</td>
-                <td style={borderStyle}>{issue.title}</td>
+                <td>{issue.id}</td>
+                <td>{issue.status}</td>
+                <td>{issue.owner}</td>
+                <td>{issue.created.toDateString()}</td>
+                <td>{issue.effort}</td>
+                <td>{issue.completionDate ? issue.completionDate.toString(): ''}</td>
+                <td>{issue.title}</td>
             </tr>
         )
     }
